@@ -1,0 +1,16 @@
+{
+  "name": "auto-descriptions-api",
+  "main": "function.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "gcloud functions deploy auto-descriptions --entry-point api --runtime nodejs12 --trigger-http --allow-unauthenticated --set-env-vars $(tr '\n' ',' < .env.production)"
+  }
+}
