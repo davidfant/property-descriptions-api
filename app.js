@@ -63,6 +63,8 @@ app.post('/generate', async (req, res) => {
         stop: STOP_PHRASE,
       }
     });
+
+    console.log(JSON.stringify({tags, gptResponse}));
   
     res.json({
       ok: true,
